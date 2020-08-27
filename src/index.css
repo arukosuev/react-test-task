@@ -1,3 +1,9 @@
+@font-face{
+  font-family: "Exo";
+  src: url("Exo2.0-Thin.otf") format("opentype");
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,118 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body {
+  font-family: 'Trebuchet MS';
+  background-color: #ccc; /*сделать градиент как в макете*/
+  background-image: url("background.png");
+}
+
+
+.header {
+  font-family: 'Exo';
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  height: 680px;
+  width: 1280px;
+  margin: 0 auto;
+  margin-top: 25px;
+  display: flex;
+}
+
+.item {
+  margin-left: 80px;
+  width: 320px;
+  height: 480px;
+  box-sizing:border-box;
+  outline: 4px solid red;
+  background-color: white;
+}
+
+h1 {
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+.item img {
+  width: 100%;
+}
+
+.item-first{
+  position: relative;
+}
+
+.item-header-first {
+  padding-left: 50px;
+  padding-top: 20px;
+
+  position: absolute;
+
+}
+
+/*Временно*/
+.item-header-first h1{
+  color:black;
+  font-size: 48px;
+  margin: 0;
+  margin-top: 15px;
+
+}
+
+.item-header-first h2{
+  color:black;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.item-header-first h3{
+  color:#323232;
+  margin: 0;
+}
+
+.item-header-first ul{
+  list-style: none;
+  padding: 0;
+}
+
+.circle {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  color: red;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  margin-left: 224px;
+  margin-top: 374px;
+}
+
+.weight-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.circle .weight{
+  display: flex;
+  justify-content: center;
+
+  font-size: 42px;
+  color: white;
+
+  padding-top: 5px;
+
+}
+
+.circle .kg{
+  color: white;
+
+  display: flex;
+  justify-content: center;
 }
