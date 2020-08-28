@@ -34,18 +34,29 @@ body {
 .wrapper {
   height: 680px;
   width: 1280px;
-  margin: 0 auto;
-  margin-top: 25px;
+  margin: 0 auto;  
   display: flex;
 }
 
 .item {
-  margin-left: 80px;
+  margin-left: 88px;
+  width: 320px;
+  height: 520px;
+  box-sizing:border-box;
+  
+  
+}
+
+.item__block {
   width: 320px;
   height: 480px;
-  box-sizing:border-box;
-  outline: 4px solid red;
   background-color: white;
+  border: 4px solid #1698d9;
+  border-radius: 9px;
+  margin-bottom: 15px;
+
+  display:flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -56,45 +67,97 @@ li {
   list-style: none;
 }
 
-.item img {
-  width: 100%;
+.item__image img {
+  width: 102.5%;
+  /*z-index, наложение картинки*/
 }
 
 .item-first{
   position: relative;
 }
 
-.item-header-first {
-  padding-left: 50px;
-  padding-top: 20px;
+.item__top {
+  display: flex;
+  position: relative;
 
+}
+
+/*Эммммм......*/
+
+.item__corner{
+  height: 44px;
+  width: 44px;
+  
+  
+  background: green;
+  position: relative; 
+  color: #fff;
+  
+  /*background:linear-gradient(-45deg,#fff,#fff 28.5px,#1698d9 0,#1698d9 32px,transparent 0)*/
+}
+
+/*
+.item__corner:after{
   position: absolute;
+  content:'';
+
+  left:20px;
+  
+  border: 20px solid transparent; 
+  border-right: 20px solid green; 
+  border-bottom: 20px solid green;
+
+  background:linear-gradient(-45deg,#fff,#fff 28.5px,#1698d9 0,#1698d9 32px,transparent 0);
+}
+*/
+
+
+
+.item__parag {
+  padding-top: 15px;
+  height: 29px;
+  padding-right: 44px;
+  flex-grow: 1;  
+}
+
+
+.item__description {
+  font-size:16px;
+  color: #666;
+}
+
+
+
+.item__header {
+  padding-left: 44px;
+  padding-right: 44px; 
+  /*position: absolute;*/
+  margin: 0;
+
 
 }
 
 /*Временно*/
-.item-header-first h1{
+.item__header h1{
   color:black;
   font-size: 48px;
-  margin: 0;
-  margin-top: 15px;
+  margin: 0;  
 
 }
 
-.item-header-first h2{
+.item__header h2{
   color:black;
   margin: 0;
   margin-bottom: 5px;
 }
 
-.item-header-first h3{
-  color:#323232;
-  margin: 0;
-}
 
-.item-header-first ul{
+
+.item__header ul{
   list-style: none;
   padding: 0;
+  font-size: 14px;
+  color: #666;
 }
 
 .circle {
@@ -102,7 +165,7 @@ li {
   height: 80px;
   width: 80px;
   color: red;
-  background-color: dodgerblue;
+  background-color: #1698d9;
   border-radius: 50%;
   margin-left: 224px;
   margin-top: 374px;
@@ -130,4 +193,11 @@ li {
 
   display: flex;
   justify-content: center;
+}
+
+.item__footer {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
 }
