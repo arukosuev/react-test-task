@@ -1,10 +1,23 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-function Item() {
-    return (
-        <div className="item">
-                
-                <div className="item__block">                    
+class Item extends Component{
+
+    state={
+
+    }
+
+    handleClick = (e) => {
+        e.preventDefault();
+        console.log('Была нажата ссылка.');
+        e.currentTarget.classList.toggle("selected");
+    }
+
+
+    render () {
+        return (
+            <div className="item">
+
+                <div className="item__block">
                     <div className="item__top">
                         <div className="item__corner"></div>
                         <div className="corner-triangle__border"></div>
@@ -26,14 +39,14 @@ function Item() {
                             <img src="../img/cat.png" alt="кот"/>
                         </div>
                     </div>
-                    <div className="circle">
+                    <div className="circle target" onClick={this.handleClick}>
                         <ul className="weight-list">
                             <li className="weight"><strong>0.5</strong></li>
                             <li className="kg"><strong>кг</strong></li>
                         </ul>
                     </div>
 
-                    
+
                 </div>
 
                 <footer className="item__footer">
@@ -42,7 +55,8 @@ function Item() {
                 </footer>
 
             </div>
-    );
+        );
+    }
 }
 
 export default Item;

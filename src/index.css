@@ -78,7 +78,7 @@ li {
 }
 
 .item__image img {
-  padding-top: 10px;
+  padding-top: 10.5px;
   width: 100%;
   background: white;
   border-radius: 0 0 3px 3px;
@@ -234,4 +234,9 @@ li {
   justify-content: center;
   color: white;
   font-size: 14px;
+}
+
+/*стили для выбранного Item (for React)*/
+.selected{
+  background-color: red;
 }
