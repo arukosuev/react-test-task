@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:after,  *:before{
+  box-sizing: inherit;
+}
+
 @font-face{
   font-family: "Exo";
   src: url("Exo2.0-Thin.otf") format("opentype");
@@ -67,10 +75,15 @@ li {
   list-style: none;
 }
 
+.item-image {
+  background: white;
+}
+
 .item__image img {
   width: 100%;
+  padding-top: 5px;
   background: white;
-  /*z-index, наложение картинки*/
+
 }
 
 .item-first{
@@ -120,15 +133,26 @@ li {
 
   content: "";
   position: absolute;
-
 }
 
+.corner-triangle__border {
+  width: 65px;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 4px solid #1698d9;
+  transform: rotate(135deg);
 
+  content: "";
+  position: absolute;
+
+  top: 19px;
+  left: -12px;
+}
 
 
 .item__parag {
   padding-top: 15px;
-  height: 29px;
+  height: 44px;
   padding-right: 44px;
   flex-grow: 1;
   background: white;

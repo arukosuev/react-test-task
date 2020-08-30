@@ -7,6 +7,7 @@ function Item() {
                 <div className="item__block">                    
                     <div className="item__top">
                         <div className="item__corner"></div>
+                        <div className="corner-triangle__border"></div>
                         <div className="item__parag">
                             <span className="item__description">Сказочное заморское яство</span>
                         </div>
@@ -34,7 +35,7 @@ function Item() {
 
                 <footer className="item__footer">
                     <span>Чего сидишь? Порадуй котэ,</span>
-                    <span><a class="item__link" href="#basket">купи/</a></span>
+                    <span><a class="item__link" href="#basket">купи!</a></span>
                 </footer>
 
             </div>
