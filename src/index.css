@@ -50,7 +50,7 @@ body {
 .item__block {
   width: 320px;
   height: 480px;
-  background-color: white;
+  background-color: transparent;
   border: 4px solid #1698d9;
   border-radius: 9px;
   margin-bottom: 15px;
@@ -68,7 +68,8 @@ li {
 }
 
 .item__image img {
-  width: 102.5%;
+  width: 100%;
+  background: white;
   /*z-index, наложение картинки*/
 }
 
@@ -89,27 +90,39 @@ li {
   width: 44px;
   
   
-  background: green;
+  background: transparent;
   position: relative; 
-  color: #fff;
+  /*color: #fff;*/
+  z-index:10;
   
   /*background:linear-gradient(-45deg,#fff,#fff 28.5px,#1698d9 0,#1698d9 32px,transparent 0)*/
 }
 
-/*
-.item__corner:after{
+
+.item__corner::after{
+  width: 0;
+  height: 0;
+  border-top: 44px solid transparent;
+  border-right: 44px solid transparent;
+
+  content: "";
   position: absolute;
-  content:'';
-
-  left:20px;
-  
-  border: 20px solid transparent; 
-  border-right: 20px solid green; 
-  border-bottom: 20px solid green;
-
-  background:linear-gradient(-45deg,#fff,#fff 28.5px,#1698d9 0,#1698d9 32px,transparent 0);
+  /*top: -4px;
+  left: -4px;
+  */
 }
-*/
+
+.item__corner::before {
+  width: 0;
+  height: 0;
+  border-bottom: 44px solid white;
+  border-left: 44px solid transparent;
+
+  content: "";
+  position: absolute;
+
+}
+
 
 
 
@@ -117,7 +130,8 @@ li {
   padding-top: 15px;
   height: 29px;
   padding-right: 44px;
-  flex-grow: 1;  
+  flex-grow: 1;
+  background: white;
 }
 
 
@@ -133,6 +147,7 @@ li {
   padding-right: 44px; 
   /*position: absolute;*/
   margin: 0;
+  background: white;
 
 
 }
