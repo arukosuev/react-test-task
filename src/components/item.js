@@ -4,14 +4,9 @@ export default class Items extends Component {
     constructor(props) {
         super(props);
         this.state={
-            selected: false,
-            activated: false,
-
-
+            selected: false
         }
         this.onSelected =this.onSelected.bind(this);
-        this.onActivated =this.onActivated.bind(this);
-        this.onDisactivated =this.onDisactivated.bind(this);
     }
 
     onSelected() {
@@ -20,17 +15,7 @@ export default class Items extends Component {
         }))
     }
 
-    onActivated() {
-        this.setState(({activated})=>({
-            activated: !activated
-        }))
-    }
 
-    onDisactivated() {
-        this.setState(({activated})=>({
-            activated: !activated
-        }))
-    }
 
     render(){
         /*const {selected = false} = this.props;*/
@@ -59,7 +44,7 @@ export default class Items extends Component {
 
 
         return (
-            <div className="item" onClick={this.onSelected} onMouseEnter={this.onActivated} onMouseOut={this.onDisactivated}>
+            <div className="item" onClick={this.onSelected}>
 
                 <div className="item__block">
                     <div className="item__top">

@@ -240,8 +240,20 @@ li {
 
 
 /*стили hover для React */
-.activated {
-  background-color: #2ea9e6;
+.item:hover .corner-triangle__border {
+    border-color: #2ea9e6;
+}
+
+.item:hover .item__parag {
+    border-color: #2ea9e6;
+}
+
+.item:hover .inner__block {
+    border-color: #2ea9e6;
+}
+
+.item:hover .circle {
+    background-color: #2ea9e6;
 }
 
 /*стили для выбранного Item (for React)*/
