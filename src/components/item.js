@@ -4,9 +4,14 @@ export default class Items extends Component {
     constructor(props) {
         super(props);
         this.state={
-            selected: false
+            selected: false,
+            activated: false,
+
+
         }
         this.onSelected =this.onSelected.bind(this);
+        this.onActivated =this.onActivated.bind(this);
+        this.onDisactivated =this.onDisactivated.bind(this);
     }
 
     onSelected() {
@@ -15,9 +20,21 @@ export default class Items extends Component {
         }))
     }
 
+    onActivated() {
+        this.setState(({activated})=>({
+            activated: !activated
+        }))
+    }
+
+    onDisactivated() {
+        this.setState(({activated})=>({
+            activated: !activated
+        }))
+    }
+
     render(){
         /*const {selected = false} = this.props;*/
-        const {selected} = this.state;
+        const {selected, activated} = this.state;
 
         let circleClasses = "circle";
         let innerBlockClasses = "inner__block";
@@ -25,6 +42,7 @@ export default class Items extends Component {
         let triangleClasses = "corner-triangle__border";
         let spanText = "Чего сидишь? Порадуй котэ,";
         let buyClasses = "";
+
         if (selected) {
             circleClasses += ' selected';
             innerBlockClasses += ' selected3';
@@ -33,8 +51,15 @@ export default class Items extends Component {
             spanText = 'Печень разварная с артишоками.';
             buyClasses = "visible";
         }
+
+        if (activated) {
+            circleClasses += ' activated';
+        }
+
+
+
         return (
-            <div className="item" onClick={this.onSelected}>
+            <div className="item" onClick={this.onSelected} onMouseEnter={this.onActivated} onMouseOut={this.onDisactivated}>
 
                 <div className="item__block">
                     <div className="item__top">
