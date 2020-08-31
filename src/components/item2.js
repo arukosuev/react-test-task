@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default class Item extends Component {
+export default class Item2 extends Component {
     constructor(props) {
         super(props);
         this.state={
@@ -33,7 +33,7 @@ export default class Item extends Component {
             innerBlockClasses += ' selected3';
             itemParagClasses += ' selected2';
             triangleClasses += ' selected4';
-            spanText = 'Печень разварная с артишоками.';
+            spanText = 'Головы щучьи с чесноком да свежайшая сёмгушка.';
             buyClasses = "visible";
         }
 
@@ -58,10 +58,10 @@ export default class Item extends Component {
                         <div className="item__header">
 
                             <h1>Нямушка</h1>
-                            <h2>с фуа-гра</h2>
+                            <h2>с рыбой</h2>
                             <ul>
-                                <li>10 порций</li>
-                                <li>1 мышь в подарок</li>
+                                <li>40 порций</li>
+                                <li>2 мыши в подарок</li>
                             </ul>
                         </div>
                         <div className="item__image">
@@ -70,7 +70,7 @@ export default class Item extends Component {
                     </div>
                     <div className={circleClasses}>
                         <ul className="weight-list">
-                            <li className="weight"><strong>0.5</strong></li>
+                            <li className="weight"><strong>2</strong></li>
                             <li className="kg"><strong>кг</strong></li>
                         </ul>
                     </div>
@@ -87,20 +87,3 @@ export default class Item extends Component {
         );
     }
 }
-
-/*
-function Item () {
-
-    handleClick = (e) => {
-        e.preventDefault();
-        console.log('Была нажата ссылка.');
-        e.currentTarget.classList.toggle("selected");
-    }
-
-    return (
-
-    );
-
-}
-
-export default Item;*/

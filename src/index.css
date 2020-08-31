@@ -61,6 +61,7 @@ body {
   background-color: transparent;
   border-radius: 9px;
   margin-bottom: 15px;
+  user-select: none;
 
   display:flex;
   flex-direction: column;
@@ -80,7 +81,7 @@ li {
 }
 
 .item__image img {
-  padding-top: 10.5px;
+  padding-top: 11px;
   width: 100%;
   background: white;
   border-radius: 0 0 3px 3px;
@@ -235,7 +236,7 @@ li {
   display: flex;
   justify-content: center;
   color: white;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 
@@ -279,5 +280,22 @@ li {
 .visible {
   display: none;
 }
+
+/*неактивный item*/
+.not-active-span {
+    color: #ff6;
+}
+
+/*не работает*/
+.circle.not-active .circle{
+    color: hsla(0, 0%, 70%, 0.5);
+    cursor: default;
+}
+
+/*доработать*/
+.not-active img{
+    padding-top: 0px;
+}
+
 
 

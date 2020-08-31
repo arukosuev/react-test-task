@@ -1,5 +1,7 @@
 import React from 'react';
 import Item from "./components/item";
+import Item2 from "./components/item2";
+import Item3 from "./components/item3";
 
 
 function App() {
@@ -11,8 +13,8 @@ function App() {
 
         <div className="wrapper">
             <Item />
-            <Item />
-            <Item />             
+            <Item2 />
+            <Item3 />
         </div>
 
     </div>
