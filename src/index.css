@@ -157,8 +157,9 @@ li {
 }
 
 
-.item__description {
+.item__description, .item__description-new {
   font-size:16px;
+  padding-left: 5px;
   color: #666;
 }
 
