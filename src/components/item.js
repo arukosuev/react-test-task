@@ -4,9 +4,11 @@ export default class Item extends Component {
     constructor(props) {
         super(props);
         this.state={
-            selected: false
+            selected: false,
+            hovered: false,
         }
         this.onSelected =this.onSelected.bind(this);
+        this.onHovered =this.onHovered.bind(this);        
     }
 
     onSelected() {
@@ -15,11 +17,16 @@ export default class Item extends Component {
         }))
     }
 
+    onHovered() {
+        this.setState(({hovered})=>({
+            hovered: !hovered
+        }))
+    }  
 
 
     render(){
         /*const {selected = false} = this.props;*/
-        const {selected, activated} = this.state;
+        const {selected, hovered} = this.state;
 
         let circleClasses = "circle";
         let innerBlockClasses = "inner__block";
@@ -37,14 +44,18 @@ export default class Item extends Component {
             buyClasses = "visible";
         }
 
-        if (activated) {
-            circleClasses += ' activated';
+        if (hovered) {
+            circleClasses += ' hovered-circle';
+            innerBlockClasses += ' hovered';
+            itemParagClasses += ' hovered';
+            triangleClasses += ' hovered';
+
         }
 
 
 
         return (
-            <div className="item" onClick={this.onSelected}>
+            <div className="item" onClick={this.onSelected} onMouseEnter={this.onHovered} onMouseLeave={this.onHovered}>
 
                 <div className="item__block">
                     <div className="item__top">
@@ -52,6 +63,7 @@ export default class Item extends Component {
                         <div className={triangleClasses}></div>
                         <div className={itemParagClasses}>
                             <span className="item__description">Сказочное заморское яство</span>
+                            <span className="item__description-new visible">Котэ не одобряет?</span>
                         </div>
                     </div>
                     <div className={innerBlockClasses}>

@@ -251,25 +251,22 @@ li {
 
 
 /*стили hover для React */
-.item:hover .corner-triangle__border {
+.hovered {
     border-color: #2ea9e6;
 }
 
-.item:hover .item__parag {
-    border-color: #2ea9e6;
-}
-
-.item:hover .inner__block {
-    border-color: #2ea9e6;
-}
-
+/*
 .item:hover .circle {
     background-color: #2ea9e6;
+} */
+
+.hovered-circle {
+  background-color: #2ea9e6;
 }
 
 .item__link:hover {
   color: #2ea9e6
-}
+} 
 
 /*стили для выбранного Item (for React)*/
 .selected{
@@ -320,5 +317,6 @@ li {
   cursor: default;
   color: hsla(0,0%,70%,0.5);
 }
+
 
 
