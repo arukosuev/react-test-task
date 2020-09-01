@@ -59,7 +59,7 @@ export default class Item extends Component {
 
                             <h1>Нямушка</h1>
                             <h2>с фуа-гра</h2>
-                            <ul>
+                            <ul className="item__list">
                                 <li>10 порций</li>
                                 <li>1 мышь в подарок</li>
                             </ul>

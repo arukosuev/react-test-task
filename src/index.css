@@ -32,7 +32,6 @@ body {
   background-image: url("background.png");
 }
 
-
 .header {
   font-family: 'Exo';
   display: flex;
@@ -61,7 +60,9 @@ body {
   background-color: transparent;
   border-radius: 9px;
   margin-bottom: 15px;
+
   user-select: none;
+  cursor: pointer;
 
   display:flex;
   flex-direction: column;
@@ -176,18 +177,19 @@ li {
   /*position: absolute;*/
   margin: 0;
   background: white;
+  color:black;
 }
 
 /*Временно*/
 .item__header h1{
-  color:black;
+  color:inherit;
   font-size: 48px;
   margin: 0;  
 
 }
 
 .item__header h2{
-  color:black;
+  color:inherit;
   margin: 0;
   margin-bottom: 5px;
 }
@@ -196,6 +198,10 @@ li {
   list-style: none;
   padding: 0;
   font-size: 14px;
+  
+}
+
+.item__list {
   color: #666;
 }
 
@@ -239,6 +245,10 @@ li {
   font-size: 13px;
 }
 
+.item__link {
+  color: #1698d9;
+}
+
 
 /*стили hover для React */
 .item:hover .corner-triangle__border {
@@ -255,6 +265,10 @@ li {
 
 .item:hover .circle {
     background-color: #2ea9e6;
+}
+
+.item__link:hover {
+  color: #2ea9e6
 }
 
 /*стили для выбранного Item (for React)*/
@@ -282,20 +296,29 @@ li {
 }
 
 /*неактивный item*/
+
 .not-active-span {
     color: #ff6;
 }
 
-/*не работает*/
-.circle.not-active .circle{
-    color: hsla(0, 0%, 70%, 0.5);
-    cursor: default;
-}
-
 /*доработать*/
-.not-active img{
+.not-active-image img{
     padding-top: 0px;
+    opacity: 0.5;
+    width: 98.5%;
 }
 
+.not-active-filling {
+  background-color: #C0C0C0;
+}
+
+.not-active-border {
+  border-color: #C0C0C0;
+}
+
+.not-active {
+  cursor: default;
+  color: hsla(0,0%,70%,0.5);
+}
 
 
