@@ -6,16 +6,14 @@ export default class Item extends Component {
         this.state={
             selected: false,
             hovered: false,
-            descriptionChanged: false,
         }
         this.onSelected =this.onSelected.bind(this);
         this.onHovered =this.onHovered.bind(this);        
-        this.changeDescription =this.changeDescription.bind(this);        
     }
 
     onSelected() {
         this.setState(({selected})=>({
-            selected: !selected            
+            selected: !selected
         }))
     }
 
@@ -25,16 +23,10 @@ export default class Item extends Component {
         }))
     }  
 
-    changeDescription() {
-        this.setState(({descriptionChanged})=>({
-            descriptionChanged: !descriptionChanged
-        }))
-    }  
-
 
     render(){
         /*const {selected = false} = this.props;*/
-        const {selected, hovered, descriptionChanged} = this.state;
+        const {selected, hovered} = this.state;
 
         let circleClasses = "circle";
         let innerBlockClasses = "inner__block";
@@ -62,17 +54,9 @@ export default class Item extends Component {
         }
 
         
-        if (descriptionChanged) {
-            oldDescription += " visible";
-            newDescription -= " visible";
-            
-        }
-        
-
-
 
         return (
-            <div className="item" onClick={this.onSelected} onMouseEnter={this.onHovered} onMouseLeave={this.onHovered && this.changeDescription}>
+            <div className="item" onClick={this.onSelected} onMouseEnter={this.onHovered} onMouseLeave={this.onHovered}>
 
                 <div className="item__block">
                     <div className="item__top">
@@ -116,20 +100,3 @@ export default class Item extends Component {
         );
     }
 }
-
-/*
-function Item () {
-
-    handleClick = (e) => {
-        e.preventDefault();
-        console.log('Была нажата ссылка.');
-        e.currentTarget.classList.toggle("selected");
-    }
-
-    return (
-
-    );
-
-}
-
-export default Item;*/
