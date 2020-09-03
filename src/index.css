@@ -157,10 +157,14 @@ li {
 }
 
 
-.item__description, .item__description-new {
+.item__description {
   font-size:16px;
   padding-left: 5px;
   color: #666;
+}
+
+.item__description-new {
+  color: #d91667;
 }
 
 .inner__block {
@@ -317,6 +321,15 @@ li {
 .not-active {
   cursor: default;
   color: hsla(0,0%,70%,0.5);
+}
+
+/*hover для выбранного item*/
+.selHovered {
+  border-color: #e62e7a;
+}
+
+.selHovered-circle{
+  background-color: #e62e7a;
 }
 
 

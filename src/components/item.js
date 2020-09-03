@@ -35,14 +35,15 @@ export default class Item extends Component {
         let spanText = "Чего сидишь? Порадуй котэ,";
         let buyClasses = "";
         let oldDescription = "item__description";
-        let newDescription = "item__description-new visible";
+        let newDescription = "item__description item__description-new visible";
 
         if (selected) {
             circleClasses += ' selected';
             innerBlockClasses += ' selected3';
             itemParagClasses += ' selected2';
             triangleClasses += ' selected4';
-            spanText = 'Печень разварная с артишоками.';
+
+            spanText = 'Печень утки разварная с артишоками.';
             buyClasses = "visible";
         }
 
@@ -51,6 +52,16 @@ export default class Item extends Component {
             innerBlockClasses += ' hovered';
             itemParagClasses += ' hovered';
             triangleClasses += ' hovered';            
+        }
+        /*перенести блок в item2*/
+        if (selected && !hovered) {
+            circleClasses += ' selHovered-circle';
+            innerBlockClasses += ' selHovered';
+            itemParagClasses += ' selHovered';
+            triangleClasses += ' selHovered';
+
+            oldDescription += ' visible';
+            newDescription = newDescription.substring(0, 39);
         }
 
         

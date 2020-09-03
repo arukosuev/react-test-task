@@ -34,13 +34,15 @@ export default class Item2 extends Component {
         let triangleClasses = "corner-triangle__border";
         let spanText = "Чего сидишь? Порадуй котэ,";
         let buyClasses = "";
+        let oldDescription = "item__description";
+        let newDescription = "item__description item__description-new visible";
 
         if (selected) {
             circleClasses += ' selected';
             innerBlockClasses += ' selected3';
             itemParagClasses += ' selected2';
             triangleClasses += ' selected4';
-            spanText = 'Печень разварная с артишоками.';
+            spanText = 'Головы щучьи с чесноком да свежайшая сёмгушка.';
             buyClasses = "visible";
         }
 
@@ -52,6 +54,16 @@ export default class Item2 extends Component {
 
         }
 
+        if (selected && !hovered) {
+            circleClasses += ' selHovered-circle';
+            innerBlockClasses += ' selHovered';
+            itemParagClasses += ' selHovered';
+            triangleClasses += ' selHovered';
+
+            oldDescription += ' visible';
+            newDescription = newDescription.substring(0, 39);
+        }
+
 
         return (
             <div className="item" onClick={this.onSelected} onMouseEnter={this.onHovered} onMouseLeave={this.onHovered}>
@@ -61,8 +73,8 @@ export default class Item2 extends Component {
                         <div className="item__corner"></div>
                         <div className={triangleClasses}></div>
                         <div className={itemParagClasses}>
-                            <span className="item__description">Сказочное заморское яство</span>
-                            <span className="item__description-new visible">Котэ не одобряет?</span>
+                            <span className={oldDescription}>Сказочное заморское яство</span>
+                            <span className={newDescription}>Котэ не одобряет?</span>
                         </div>
                     </div>
                     <div className={innerBlockClasses}>
