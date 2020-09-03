@@ -28,8 +28,8 @@ code {
 
 body {
   font-family: 'Trebuchet MS';
-  background-color: #ccc; /*сделать градиент как в макете*/
-  background-image: url("background.png");
+  background-image: url("shadow.png"),url("background.png");
+  background-size: 100%;
 }
 
 .header {
