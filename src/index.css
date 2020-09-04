@@ -30,29 +30,45 @@ body {
   font-family: 'Trebuchet MS';
   background-image: url("shadow.png"),url("background.png");
   background-size: 100%;
+  background-attachment: fixed;
+}
+
+.main-wrapper{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 .header {
   font-family: 'Exo';
+  margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .wrapper {
-  height: 680px;
-  width: 1280px;
-  margin: 0 auto;  
+  max-height: 535px;
+  min-width: 1120px;
+
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .item {
+  margin-top: 30px;
   margin-left: 88px;
   width: 320px;
   height: 520px;
   box-sizing:border-box;
 }
 
-
+.item:first-child {
+  margin-left: 0;
+}
 
 .item__block {
   width: 320px;
@@ -70,6 +86,7 @@ body {
 
 h1 {
   color: white;
+  margin: 0;
 }
 
 li {
@@ -330,6 +347,10 @@ li {
 
 .selHovered-circle{
   background-color: #e62e7a;
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+
 }
 
 
