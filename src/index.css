@@ -38,6 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
 }
 
@@ -59,15 +60,11 @@ body {
 }
 
 .item {
+  margin: 0 44px;
   margin-top: 30px;
-  margin-left: 88px;
   width: 320px;
   height: 520px;
   box-sizing:border-box;
-}
-
-.item:first-child {
-  margin-left: 0;
 }
 
 .item__block {
@@ -269,18 +266,16 @@ li {
 
 .item__link {
   color: #1698d9;
+  text-decoration: none; 
+  border-bottom: 1px dashed;  
 }
 
 
 /*стили hover для React */
 .hovered {
-    border-color: #2ea9e6;
+  border-color: #2ea9e6;
 }
 
-/*
-.item:hover .circle {
-    background-color: #2ea9e6;
-} */
 
 .hovered-circle {
   background-color: #2ea9e6;
@@ -349,9 +344,64 @@ li {
   background-color: #e62e7a;
 }
 
-@media (min-width: 800px) and (max-width: 1199px) {
+@media (max-width: 799px) {
+  .wrapper {
+    min-width: 0;
+    max-height: 0;
+  }
 
+  .item:last-child {
+    margin-bottom: 25px;    
+  }
+
+  .main-wrapper {
+    padding: 30px 0;
+  }
 }
+
+@media (min-width: 799px) and (max-width: 1135px) {
+  .wrapper {
+    min-width: 0;
+    max-height: 0;
+  }  
+}
+
+
+@media (max-width: 1223px) {
+  .main-wrapper {
+    height: 100%;
+  }
+} 
+
+@media (min-width: 800px) and (max-width: 1223px){
+  .item:last-child {
+    margin-bottom: 25px;    
+  }
+  .main-wrapper {
+    padding: 30px;
+  }
+}
+
+
+@media (max-height: 650px) {
+  .main-wrapper {
+    height: 100%;
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 401px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .item {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
 
 
 
