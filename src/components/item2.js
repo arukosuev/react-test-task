@@ -28,10 +28,10 @@ export default class Item2 extends Component {
         /*const {selected = false} = this.props;*/
         const {selected, hovered} = this.state;
 
-        let circleClasses = "circle";
+        let circleClasses = "item__circle";
         let innerBlockClasses = "inner__block";
         let itemParagClasses = "item__parag";
-        let triangleClasses = "corner-triangle__border";
+        let triangleClasses = "item__triangle__border";
         let spanText = "Чего сидишь? Порадуй котэ,";
         let buyClasses = "";
         let oldDescription = "item__description";
@@ -92,9 +92,9 @@ export default class Item2 extends Component {
                         </div>
                     </div>
                     <div className={circleClasses}>
-                        <ul className="weight-list">
-                            <li className="weight"><strong>2</strong></li>
-                            <li className="kg"><strong>кг</strong></li>
+                        <ul className="item__weight">
+                            <li className="item__amount"><strong>2</strong></li>
+                            <li className="item__measure"><strong>кг</strong></li>
                         </ul>
                     </div>
 

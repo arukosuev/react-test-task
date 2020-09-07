@@ -33,6 +33,15 @@ body {
   background-attachment: fixed;
 }
 
+h1 {
+  color: white;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
 .main-wrapper{
   height: 100vh;
   display: flex;
@@ -81,29 +90,11 @@ body {
   flex-direction: column;
 }
 
-h1 {
-  color: white;
-  margin: 0;
-}
-
-li {
-  list-style: none;
-}
-
-.item-image {
-  background: white;
-  flex-grow: 1;
-}
-
 .item__image img {
   padding-top: 11px;
   width: 100%;
   background: white;
   border-radius: 0 0 3px 3px;
-}
-
-.item-first{
-  position: relative;
 }
 
 .item__top {
@@ -112,8 +103,6 @@ li {
 
 }
 
-/*Эммммм......*/
-
 .item__corner{
   height: 44px;
   width: 44px;
@@ -121,7 +110,6 @@ li {
   background: transparent;
   position: relative;
 }
-
 
 .item__corner::after{
   width: 0;
@@ -143,7 +131,7 @@ li {
   position: absolute;
 }
 
-.corner-triangle__border {
+.item__triangle__border {
   width: 62px;
   border-left: 0px solid transparent;
   border-right: 0px solid transparent;
@@ -157,7 +145,6 @@ li {
   left: -8px;
 }
 
-
 .item__parag {
   padding-top: 15px;
   height: 44px;
@@ -169,7 +156,6 @@ li {
   border-left: none;
   border-bottom: none;
 }
-
 
 .item__description {
   font-size:16px;
@@ -189,7 +175,6 @@ li {
   border-radius: 0 0 6px 6px;
 }
 
-
 .item__header {
   padding-left: 44px;
   padding-right: 44px; 
@@ -199,12 +184,10 @@ li {
   color:black;
 }
 
-/*Временно*/
 .item__header h1{
   color:inherit;
   font-size: 48px;
-  margin: 0;  
-
+  margin: 0;
 }
 
 .item__header h2{
@@ -217,14 +200,13 @@ li {
   list-style: none;
   padding: 0;
   font-size: 14px;
-  
 }
 
 .item__list {
   color: #666;
 }
 
-.circle {
+.item__circle {
   position: absolute;
   height: 80px;
   width: 80px;
@@ -234,13 +216,13 @@ li {
   margin-top: 374px;
 }
 
-.weight-list {
+.item__weight {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.circle .weight{
+.item__circle .item__amount{
   display: flex;
   justify-content: center;
 
@@ -250,7 +232,7 @@ li {
   padding-top: 5px;
 }
 
-.circle .kg{
+.item__circle .item__measure{
   color: white;
 
   display: flex;
@@ -276,7 +258,6 @@ li {
   border-color: #2ea9e6;
 }
 
-
 .hovered-circle {
   background-color: #2ea9e6;
 }
@@ -285,7 +266,7 @@ li {
   color: #2ea9e6
 } 
 
-/*стили для выбранного Item (for React)*/
+/*стили для selected item (for React)*/
 .selected{
   background-color: #d91667;
 }
@@ -310,12 +291,10 @@ li {
 }
 
 /*неактивный item*/
-
 .not-active-span {
     color: #ff6;
 }
 
-/*доработать*/
 .not-active-image img{
     padding-top: 0px;
     opacity: 0.5;
@@ -335,7 +314,7 @@ li {
   color: hsla(0,0%,70%,0.5);
 }
 
-/*hover для выбранного item*/
+/*hover для selected item*/
 .selHovered {
   border-color: #e62e7a;
 }
@@ -344,6 +323,7 @@ li {
   background-color: #e62e7a;
 }
 
+/*меди-запросы*/
 @media (max-width: 799px) {
   .wrapper {
     min-width: 0;
@@ -392,7 +372,7 @@ li {
 
 @media (max-width: 401px) {
   .header h1 {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .item {

@@ -10,7 +10,7 @@ export default class Item3 extends Component {
                 <div className="item__block not-active">
                     <div className="item__top">
                         <div className="item__corner"></div>
-                        <div className="corner-triangle__border not-active-border"></div>
+                        <div className="item__triangle__border not-active-border"></div>
                         <div className="item__parag not-active-border">
                             <span className="item__description not-active">Сказочное заморское яство</span>
                         </div>
@@ -30,10 +30,10 @@ export default class Item3 extends Component {
                             <img src="../img/cat.png" alt="кот"/>
                         </div>
                     </div>
-                    <div className="circle not-active-filling">
-                        <ul className="weight-list">
-                            <li className="weight"><strong>5</strong></li>
-                            <li className="kg"><strong>кг</strong></li>
+                    <div className="item__circle not-active-filling">
+                        <ul className="item__weight">
+                            <li className="item__amount"><strong>5</strong></li>
+                            <li className="item__measure"><strong>кг</strong></li>
                         </ul>
                     </div>
 
