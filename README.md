@@ -8,4 +8,4 @@
 - Responsive
 - Not supported Safari и IE11 :(
 
-[Click the demo](http://x96325gy.beget.tech/)
+**[Click the demo](http://x96325gy.beget.tech/)
