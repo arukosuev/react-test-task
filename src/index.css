@@ -90,7 +90,6 @@ li {
   flex-direction: column;
 }
 
-
 .item__image img {
   padding-top: 11px; /*default: 10-11px*/
   width: 100%;
