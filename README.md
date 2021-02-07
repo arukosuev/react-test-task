@@ -1,4 +1,7 @@
-### Small test task
+# Small test task  
+
+Responsive test task about cat's food 🍲🐈
+
 #### ⚙️Use `npm start` command to run app locally
 
 - React 
